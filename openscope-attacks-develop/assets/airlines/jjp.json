@@ -1,0 +1,16 @@
+{
+    "icao": "jjp",
+    "name": "Jetstar Japan",
+    "callsign": {
+        "name": "Orange Liner",
+        "callsignFormats": [
+            "###",
+            "##"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A320", 22]
+        ]
+    }
+}

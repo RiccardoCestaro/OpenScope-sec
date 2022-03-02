@@ -1,0 +1,16 @@
+{
+    "icao": "ctv",
+    "name": "Citilink",
+    "callsign": {
+        "name": "Supergreen",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B733", 5],
+            ["A320", 37]
+        ]
+    }
+}

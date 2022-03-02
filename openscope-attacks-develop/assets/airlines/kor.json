@@ -1,0 +1,20 @@
+{
+    "icao": "kor",
+    "name": "Air Koryo",
+    "callsign": {
+        "name": "Air Koryo",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A148", 2],
+            ["IL62", 2],
+            ["IL76", 1],
+            ["T134", 1],
+            ["T154", 1],
+            ["T204", 2]
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "icao": "gow",
+    "name": "GoAir",
+    "callsign": {
+        "name": "Go Air",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A20N", 15],
+            ["A320", 19]
+        ]
+    }
+}

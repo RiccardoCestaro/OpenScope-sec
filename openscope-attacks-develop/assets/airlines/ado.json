@@ -1,0 +1,17 @@
+{
+    "icao": "ado",
+    "name": "Air Do",
+    "callsign": {
+        "name": "Air Do",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B735", 1],
+            ["B737", 9],
+            ["B763", 4]
+        ]
+    }
+}

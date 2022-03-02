@@ -1,0 +1,17 @@
+{
+    "icao": "wia",
+    "name": "Winair",
+    "callsign": {
+        "name": "Windward",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["at45", 3],
+            ["at76", 1],
+            ["dhc6", 4]
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "Avro RJ-100",
+    "icao": "RJ1H",
+    "engines": {
+        "number": 4,
+        "type": "J"
+    },
+    "weightClass": "M",
+    "category": {
+        "srs": 3,
+        "lahso": 7,
+        "recat": "E"
+    },
+    "ceiling": 31000,
+    "rate": {
+        "climb":      2000,
+        "descent":    3000,
+        "accelerate": 8,
+        "decelerate": 5
+    },
+    "runway": {
+        "takeoff": 1.600,
+        "landing": 1.200
+    },
+    "speed":{
+        "min":     110,
+        "landing": 125,
+        "cruise":  389,
+        "cruiseM": 0.68,
+        "max":     412,
+        "maxM":    null
+    },
+    "capability": {
+        "ils": true,
+        "fix": true
+    }
+}

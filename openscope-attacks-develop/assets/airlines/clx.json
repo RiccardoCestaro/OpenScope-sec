@@ -1,0 +1,18 @@
+{
+    "icao": "clx",
+    "name": "Cargolux Airlines International",
+    "callsign": {
+        "name": "Cargolux",
+        "callsignFormats": [
+            "###",
+            "##@@",
+            "###@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B744", 13],
+            ["B748", 14]
+        ]
+    }
+}

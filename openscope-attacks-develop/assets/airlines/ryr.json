@@ -1,0 +1,22 @@
+{
+    "icao": "ryr",
+    "name": "Ryanair",
+    "callsign": {
+        "name": "Ryanair",
+        "callsignFormats": [
+            "##@@",
+            "###@",
+            "####",
+            "##@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B737", 1],
+            ["B738", 364]
+        ],
+        "b738": [
+            ["B738", 364]
+        ]
+    }
+}

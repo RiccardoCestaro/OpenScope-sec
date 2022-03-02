@@ -1,0 +1,23 @@
+{
+    "icao": "sxd",
+    "name": "SunExpress Deutschland",
+    "callsign": {
+        "name": "Sunrise",
+        "callsignFormats": [
+            "##@",
+            "#@@",
+            "#@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 11]
+        ],
+        "short": [
+            ["B738", 11]
+        ],
+        "b738": [
+            ["B738", 11]
+        ]
+    }
+}

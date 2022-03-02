@@ -1,0 +1,17 @@
+{
+    "icao": "mxd",
+    "name": "Malindo Air",
+    "callsign": {
+        "name": "Malindo",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["AT76", 11],
+            ["B738", 12],
+            ["B739",  6]
+        ]
+    }
+}

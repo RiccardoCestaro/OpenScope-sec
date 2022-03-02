@@ -1,0 +1,15 @@
+{
+    "icao": "cnd",
+    "name": "Corendon Dutch Airlines",
+    "callsign": {
+        "name": "Dutch Corendon",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 3]
+        ]
+    }
+}

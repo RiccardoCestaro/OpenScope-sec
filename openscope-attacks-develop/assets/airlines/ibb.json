@@ -1,0 +1,17 @@
+{
+    "icao": "ibb",
+    "name": "Binter Canarias",
+    "callsign": {
+        "name": "Binter",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["AT72", 7],
+            ["AT76", 12],
+            ["CRJX", 3]
+        ]
+    }
+}

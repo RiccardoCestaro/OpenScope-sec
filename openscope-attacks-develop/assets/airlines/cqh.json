@@ -1,0 +1,15 @@
+{
+    "icao": "cqh",
+    "name": "Spring Airlines",
+    "callsign": {
+        "name": "Air Spring",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A320", 78]
+        ]
+    }
+}

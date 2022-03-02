@@ -1,0 +1,18 @@
+{
+    "icao": "gti",
+    "name": "Atlas Air",
+    "callsign": {
+        "name": "Giant",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B744", 28],
+            ["B748", 10],
+            ["B762", 9],
+            ["B763", 26]
+        ]
+    }
+}

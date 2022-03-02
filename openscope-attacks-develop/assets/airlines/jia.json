@@ -1,0 +1,17 @@
+{
+    "icao": "jia",
+    "name": "PSA Airlines",
+    "callsign": {
+        "name": "Blue Streak",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["CRJ2", 35],
+            ["CRJ7", 39],
+            ["CRJ9", 54]
+        ]
+    }
+}

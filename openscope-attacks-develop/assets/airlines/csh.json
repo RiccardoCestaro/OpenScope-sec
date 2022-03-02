@@ -1,0 +1,20 @@
+{
+    "icao": "csh",
+    "name": "Shanghai Airlines",
+    "callsign": {
+        "name": "Shanghai Air",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A332", 3],
+            ["A333", 3],
+            ["B38M", 6],
+            ["B737", 10],
+            ["B738", 73],
+            ["B763", 3]
+        ]
+    }
+}

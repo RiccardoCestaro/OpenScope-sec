@@ -1,0 +1,24 @@
+{
+    "icao": "vkg",
+    "name": "Thomas Cook Airlines Scandinavia",
+    "callsign": {
+        "name": "Viking",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A321", 8],
+            ["A332", 1],
+            ["A333", 3]
+        ],
+        "long": [
+            ["A332", 1],
+            ["A333", 3]
+        ],
+        "short": [
+            ["A321", 8]
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "icao": "saw",
+    "name": "Cham Wings Airlines",
+    "callsign": {
+        "name": "Shamwing",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A320",  4]
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "icao": "eny",
+    "name": "Envoy Air",
+    "callsign": {
+        "name": "Envoy",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["E170", 44]
+        ]
+    }
+}

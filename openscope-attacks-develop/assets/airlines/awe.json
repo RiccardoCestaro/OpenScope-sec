@@ -1,0 +1,20 @@
+{
+    "icao": "awe",
+    "name": "US Airways",
+    "callsign": {
+        "name": "Cactus",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 93 ],
+            ["A320", 63 ],
+            ["A321", 109 ],
+            ["B752", 24 ],
+            ["B762", 5 ],
+            ["E190", 20 ]
+        ]
+    }
+}

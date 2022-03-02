@@ -1,0 +1,37 @@
+{
+    "name": "Airbus A380-800",
+    "icao": "A388",
+    "engines": {
+        "number": 4,
+        "type": "J"
+    },
+    "weightClass": "J",
+    "category": {
+        "srs": 3,
+        "lahso": 10,
+        "recat": "A"
+    },
+    "ceiling": 43000,
+    "rate": {
+        "climb":      2500,
+        "descent":    2000,
+        "accelerate": 6,
+        "decelerate": 4
+    },
+    "runway": {
+        "takeoff": 3.000,
+        "landing": 3.000
+    },
+    "speed":{
+        "min":     125,
+        "landing": 135,
+        "cruise":  560,
+        "cruiseM": 0.85,
+        "max":     595,
+        "maxM":    0.89
+    },
+    "capability": {
+        "ils": true,
+        "fix": true
+    }
+}

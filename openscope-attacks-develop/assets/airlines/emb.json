@@ -1,0 +1,21 @@
+{
+    "icao": "emb",
+    "name": "Embraer",
+    "callsign": {
+        "name": "Embraer",
+        "callsignFormats": [
+            "####",
+            "###@",
+            "##@@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["E50P", 5],
+            ["E55P", 5],
+            ["E545", 5],
+            ["E190", 8],
+            ["E135", 1]
+        ]
+    }
+}

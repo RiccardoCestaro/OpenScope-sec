@@ -1,0 +1,22 @@
+{
+    "icao": "slk",
+    "name": "Silk Air",
+    "callsign": {
+        "name": "Silkair",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 3],
+            ["CRJ7", 2],
+            ["CRJ9", 9],
+            ["SB20", 6]
+        ],
+        "crj": [
+            ["CRJ7", 2],
+            ["CRJ9", 9]
+        ]
+    }
+}

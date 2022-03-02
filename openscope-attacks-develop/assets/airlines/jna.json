@@ -1,0 +1,18 @@
+{
+    "icao": "jna",
+    "name": "Jin Air",
+    "callsign": {
+        "name": "Jin Air",
+        "callsignFormats": [
+            "###",
+            "##",
+            "#"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 22],
+            ["B772", 4]
+        ]
+    }
+}

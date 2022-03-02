@@ -1,0 +1,22 @@
+{
+    "icao": "fpo",
+    "name": "ASL Airlines France",
+    "callsign": {
+        "name": "French Post",
+        "callsignFormats": [
+            "####",
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B733", 5],
+            ["B734", 4],
+            ["B737", 6]
+        ],
+        "cargo": [
+            ["B733", 2],
+            ["B734", 4]
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "icao": "inc",
+    "name": "Insel Air",
+    "callsign": {
+        "name": "Inselair",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["F50", 4],
+            ["MD83", 1]
+        ]
+    }
+}

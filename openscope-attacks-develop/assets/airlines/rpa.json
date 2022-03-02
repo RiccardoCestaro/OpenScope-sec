@@ -1,0 +1,17 @@
+{
+    "icao": "rpa",
+    "name": "Republic Airlines",
+    "callsign": {
+        "name": "Brickyard",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["E135", 1],
+            ["E145", 1],
+            ["E170", 188]
+        ]
+    }
+}

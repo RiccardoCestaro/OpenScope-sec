@@ -1,0 +1,20 @@
+{
+    "icao": "igo",
+    "name": "IndiGo",
+    "callsign": {
+        "name": "Ifly",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A20N", 32],
+            ["A320", 124],
+            ["AT76", 6]
+        ],
+        "a320": [
+            ["A320", 124]
+        ]
+    }
+}

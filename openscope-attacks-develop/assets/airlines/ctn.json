@@ -1,0 +1,26 @@
+{
+    "icao": "ctn",
+    "name": "Croatia Airlines",
+    "callsign": {
+        "name": "Croatia",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 4],
+            ["A320", 2],
+            ["DH8D", 6]
+        ],
+        "a319": [
+            ["A319", 4]
+        ],
+        "dh8d": [
+            ["dh8d", 6]
+        ],
+        "wetlease": [
+            ["CRJX", 2]
+        ]
+    }
+}

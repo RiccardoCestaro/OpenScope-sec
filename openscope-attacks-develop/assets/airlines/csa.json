@@ -1,0 +1,18 @@
+{
+    "icao": "csa",
+    "name": "Czech Airlines",
+    "callsign": {
+        "name": "CSA",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["AT45", 3],
+            ["AT72", 5],
+            ["A319", 8],
+            ["A333", 1]
+        ]
+    }
+}

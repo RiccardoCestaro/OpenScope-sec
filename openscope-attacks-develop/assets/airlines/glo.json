@@ -1,0 +1,16 @@
+{
+    "icao": "glo",
+    "name": "Gol Linhas Aereas",
+    "callsign": {
+        "name": "Gol",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B737", 26],
+            ["B738", 92]
+        ]
+    }
+}

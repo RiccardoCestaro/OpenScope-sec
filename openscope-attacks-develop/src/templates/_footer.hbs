@@ -1,0 +1,115 @@
+<div class="footer">
+    <input id="command"
+           placeholder="enter aircraft command"
+           autocapitalize="off"
+           autocorrect="off"
+           autocomplete="off"
+           spellcheck="false"
+           autofocus />
+    {{!-- move to ul li.hlist --}}
+
+    <ul class="controls-menu">
+        <li class="control-item">
+            <a class="control-icon fast-forwards">
+                <img src="assets/images/icons/fast-forwards.png" />
+            </a>
+        </li>
+        <li class="control-item">
+            <a class="control-icon toggle-pause" title="Pause simulation">
+                <img src="assets/images/icons/pause.png" />
+            </a>
+        </li>
+        <li class="control-item">
+            <a class="control-icon switch-airport" title="Switch airport">
+                <img src="assets/images/icons/airport.png" />
+            </a>
+        </li>
+        <li class="control-item">
+            <a class="control-icon">
+                <img src="assets/images/icons/scope.png" />
+            </a>
+            <div class="control-item-content">
+                <a class="control toggle-labels">
+                    <img src="assets/images/icons/labels.png" />
+                    <span>Fixes & Runways</span>
+                </a>
+                <a class="control toggle-sids">
+                    <img src="assets/images/icons/sids.png" />
+                    <span>SID display</span>
+                </a>
+                <a class="control toggle-stars">
+                    <img src="assets/images/icons/stars.png" />
+                    <span>STAR display</span>
+                </a>
+                <a class="control toggle-restricted-areas">
+                    <img src="assets/images/icons/restricted.png" />
+                    <span>Restricted Areas</span>
+                </a>
+                <a class="control toggle-terrain active">
+                    <img src="assets/images/icons/terrain.png" />
+                    <span>Terrain</span>
+                </a>
+                <a class="control toggle-video-map active">
+                    <img src="assets/images/icons/map.png" />
+                    <span>Video Map</span>
+                </a>
+                </a>
+            </div>
+        </li>
+        <li class="control-item">
+            <a class="control-icon">
+                <img src="assets/images/icons/cog.png" />
+            </a>
+            <div class="control-item-content">
+                <a class="control" id="toggle-attacks">
+                    <img src="assets/images/icons/attack.png" />
+                    <span>Attacks</span>
+                </a>
+                <a class="control" id="toggle-options">
+                    <img src="assets/images/icons/cog.png" />
+                    <span>Settings</span>
+                </a>
+                <a class="control toggle-speech">
+                    <img src="assets/images/icons/speech.png" />
+                    <span>Speech</span>
+                </a>
+                <a class="control toggle-traffic">
+                    <img src="assets/images/icons/traffic.png" />
+                    <span>Traffic</span>
+                </a>
+            </div>
+        </li>
+        <li class="control-item">
+            <a class="control-icon">
+                <img src="assets/images/icons/questionmark.png" />
+            </a>
+            <div class="control-item-content">
+                <button type="button" style="width:100%;margin-top: 4px;margin-bottom: 4px;margin: auto;padding: 4%;font-size: 13px;font-family: monospace;text-align: center;color: lightgrey;opacity: 85%;font-weight: bold;background-color: rgb(14,14,14);border-width: 3px;" 
+                id="dwn-adsb" value="Download ads-b">Download ads-b</button>
+                <button type="button" style="width:100%;margin-top: 4px;margin-bottom: 4px;margin: auto;padding: 4%;font-size: 13px;font-family: monospace;text-align: center;color: lightgrey;opacity: 85%;font-weight: bold;background-color: rgb(14,14,14);border-width: 3px;" 
+                id="dwn-btn" value="Download logfile">Download logfile</button>
+                <a class="control" id="toggle-attacks-information">
+                    <img src="assets/images/icons/attack.png" />
+                    <span>Information</span>
+                </a>
+                <a class="control toggle-airport-guide">
+                    <img src="assets/images/icons/airport-guide.png" />
+                    <span>Airport Guide</span>
+                </a>
+                <a class="control toggle-tutorial">
+                    <img src="assets/images/icons/tutorial.png" />
+                    <span>Tutorial</span>
+                </a>
+                <a class="control js-changelogToggle">
+                    <img src="assets/images/icons/changelog.png" />
+                    <span>Changelog</span>
+                </a>
+                <a class="control" href="https://github.com/openscope/openscope" id="js-github-external-link" target="_blank">
+                    <img src="assets/images/GitHub-Mark-Light-32px.png" class="github-logo" />
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <div id="score" title="Score">-</div>
+</div>

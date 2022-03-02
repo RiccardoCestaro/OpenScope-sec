@@ -1,0 +1,29 @@
+{
+    "icao": "bel",
+    "name": "Brussels Airlines",
+    "callsign": {
+        "name": "Beeline",
+        "callsignFormats": [
+            "####",
+            "###",
+            "##@",
+            "#@@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 22],
+            ["A320", 17],
+            ["A332", 3],
+            ["A333", 11]
+        ],
+        "long": [
+            ["A332", 3],
+            ["A333", 11]
+        ],
+        "short": [
+            ["A319", 22],
+            ["A320", 17]
+        ]
+    }
+}

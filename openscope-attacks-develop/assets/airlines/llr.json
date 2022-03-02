@@ -1,0 +1,16 @@
+{
+    "icao": "llr",
+    "name": "Alliance Air",
+    "callsign": {
+        "name": "Allied",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["AT43", 3],
+            ["AT76", 14]
+        ]
+    }
+}

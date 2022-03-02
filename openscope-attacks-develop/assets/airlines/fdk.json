@@ -1,0 +1,15 @@
+{
+    "icao": "fdk",
+    "name": "FlyDamas",
+    "callsign": {
+        "name": "Damavia",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B735",  1]
+        ]
+    }
+}

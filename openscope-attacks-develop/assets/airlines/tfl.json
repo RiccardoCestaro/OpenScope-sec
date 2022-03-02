@@ -1,0 +1,27 @@
+{
+    "icao": "tfl",
+    "name": "TUI Airlines Netherlands",
+    "callsign": {
+        "name": "Orange",
+        "callsignFormats": [
+            "####",
+            "###",
+            "##@",
+            "#@@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 7],
+            ["B763", 1],
+            ["B788", 3]
+        ],
+        "short": [
+            ["B738", 7]
+        ],
+        "long": [
+            ["B763", 1],
+            ["B788", 3]
+        ]
+    }
+}

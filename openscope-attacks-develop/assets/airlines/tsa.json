@@ -1,0 +1,19 @@
+{
+    "icao": "tsa",
+    "name": "Threat Simulator Airlines",
+    "callsign": {
+        "name": "ThreatSim",
+        "callsignFormats": [
+            "####",
+            "###",
+            "##"
+        ]
+    },
+    "fleets": {
+        "default": [
+
+            ["A10N", 100]
+        
+        ]
+    }
+}

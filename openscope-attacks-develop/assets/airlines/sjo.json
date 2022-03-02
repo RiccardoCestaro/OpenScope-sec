@@ -1,0 +1,15 @@
+{
+    "icao": "sjo",
+    "name": "Spring Airlines Japan",
+    "callsign": {
+        "name": "Jey Spring",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 6]
+        ]
+    }
+}

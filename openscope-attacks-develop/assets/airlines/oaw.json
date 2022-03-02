@@ -1,0 +1,17 @@
+{
+    "icao": "oaw",
+    "name": "Helvetic Airways",
+    "callsign": {
+        "name": "Helvetic",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 1],
+            ["F100", 5],
+            ["E190", 7]
+        ]
+    }
+}

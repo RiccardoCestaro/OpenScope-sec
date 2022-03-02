@@ -1,0 +1,16 @@
+{
+    "icao": "ibs",
+    "name": "Iberia Express",
+    "callsign": {
+        "name": "Iberexpress",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A320", 18],
+            ["A321", 3]
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "icao": "jsa",
+    "name": "Jestar Asia Airways",
+    "callsign": {
+        "name": "Jetstar Asia",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A320", 18]
+        ]
+    }
+}

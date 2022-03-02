@@ -1,0 +1,17 @@
+{
+    "icao": "cfs",
+    "name": "Empire Airlines",
+    "callsign": {
+        "name": "Empire",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["AT43", 3],
+            ["AT45", 4],
+            ["AT72", 7]
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "icao": "tra",
+    "name": "Transavia Holland",
+    "callsign": {
+        "name": "Transavia",
+        "callsignFormats": [
+            "####",
+            "###@",
+            "###",
+            "##@",
+            "#@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B737", 8],
+            ["B738", 34]
+        ],
+        "short": [
+            ["B737", 8],
+            ["B738", 34]
+        ]
+    }
+}

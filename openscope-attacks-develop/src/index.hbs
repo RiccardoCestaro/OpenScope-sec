@@ -1,0 +1,24 @@
+{{#extend "layout"}}
+    {{#content "body" mode="append" }}
+        <div id="canvases"></div>
+        <div id="log"></div>
+
+        {{> _stripView}}
+
+        {{> _footer}}
+
+        {{!--
+            the following partials should be combined into a _modals.hbs which should include
+            any other modals defined with in the JS (Settings, Tutorial, etc)
+        --}}
+        {{> _airportSwitch}}
+
+        {{> _airportGuide}}
+
+        {{> _changelog}}
+
+        {{> _paused}}
+
+        {{> _loadingView}}
+    {{/content}}
+{{/extend}}

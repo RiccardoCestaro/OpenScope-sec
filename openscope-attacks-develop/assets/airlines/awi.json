@@ -1,0 +1,15 @@
+{
+    "icao": "awi",
+    "name": "Air Wisconsin",
+    "callsign": {
+        "name": "Wisconsin",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["CRJ2", 63]
+        ]
+    }
+}

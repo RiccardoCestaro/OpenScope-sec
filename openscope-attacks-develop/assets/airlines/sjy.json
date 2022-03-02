@@ -1,0 +1,18 @@
+{
+    "icao": "sjy",
+    "name": "Sriwijaya",
+    "callsign": {
+        "name": "Sriwijaya",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B733", 4],
+            ["B735", 6],
+            ["B738", 24],
+            ["B739", 2]
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "icao": "dkh",
+    "name": "Juneyao Airlines",
+    "callsign": {
+        "name": "Air Juneyao",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319",     1],
+            ["A320",    41],
+            ["A321",    15]
+        ]
+    }
+}

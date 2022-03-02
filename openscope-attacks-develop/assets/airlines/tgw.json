@@ -1,0 +1,18 @@
+{
+    "icao": "tgw",
+    "name": "Scoot",
+    "callsign": {
+        "name": "Scooter",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 2],
+            ["A320", 23],
+            ["B788", 10],
+            ["B789", 7]
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "icao": "asv",
+    "name": "Air Seoul",
+    "callsign": {
+        "name": "Air Seoul",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A321",    1]
+        ]
+    }
+}

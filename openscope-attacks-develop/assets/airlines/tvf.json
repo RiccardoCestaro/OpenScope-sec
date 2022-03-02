@@ -1,0 +1,18 @@
+{
+    "icao": "tvf",
+    "name": "Transavia France",
+    "callsign": {
+        "name": "France Soleil",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 32]
+        ],
+        "short": [
+            ["B738", 32]
+        ]
+    }
+}

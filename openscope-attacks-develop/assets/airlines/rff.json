@@ -1,0 +1,18 @@
+{
+    "icao": "rff",
+    "name": "Russian Air Force",
+    "callsign": {
+        "name": "Russian Air Force",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A124", 7],
+            ["A148", 10],
+            ["IL96", 1],
+            ["T204", 2]
+        ]
+    }
+}

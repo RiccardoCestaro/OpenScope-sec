@@ -1,0 +1,20 @@
+{
+    "icao": "tvs",
+    "name": "Smartwings",
+    "callsign": {
+        "name": "Skytravel",
+        "callsignFormats": [
+            "####",
+            "#@@",
+            "#@"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B38M", 7],
+            ["B737", 2],
+            ["B738", 24],
+            ["B739", 2]
+        ]
+    }
+}

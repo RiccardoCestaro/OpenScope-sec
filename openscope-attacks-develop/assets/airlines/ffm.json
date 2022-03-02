@@ -1,0 +1,15 @@
+{
+    "icao": "ffm",
+    "name": "Firefly",
+    "callsign": {
+        "name": "Firefly",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["AT72", 12]
+        ]
+    }
+}

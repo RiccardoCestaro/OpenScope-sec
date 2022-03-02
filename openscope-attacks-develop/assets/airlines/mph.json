@@ -1,0 +1,15 @@
+{
+    "icao": "mph",
+    "name": "Martinair",
+    "callsign": {
+        "name": "Martinair",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B744", 1]
+        ]
+    }
+}

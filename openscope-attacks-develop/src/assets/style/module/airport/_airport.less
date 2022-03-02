@@ -1,0 +1,49 @@
+.airport-list-item {
+    margin-bottom: 2px;
+    padding: 8px @spacing-1x;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.airport-list-item .difficulty {
+    width: 5em;
+    display: inline-block;
+    font-size: 120%;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.airport-list-item .icao {
+    width: 2.5em;
+    margin-left: 1em;
+    display: inline-block;
+    text-align: center;
+}
+
+.airport-list-item .name {
+    margin-left: 1em;
+    display: inline-block;
+    text-align: center;
+}
+
+.airport-list-item:hover {
+    background-color: @white-01;
+    cursor: pointer;
+}
+
+// .airport-list-item .active {
+//     // override margin-left from base 'active' class used in strips
+//     margin-left: 0;
+//     background-color: #335544;
+//     cursor: pointer;
+// }
+
+.airport-list-item.active:hover {
+    cursor: auto;
+}
+
+.mix-airport-list-item_isActive {
+    margin-left: 0;
+    background-color: @blue-medium;
+    cursor: pointer;
+}

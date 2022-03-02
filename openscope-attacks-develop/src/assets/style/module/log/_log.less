@@ -1,0 +1,37 @@
+#log {
+    width: ~"calc(100% - 200px)";
+    position: absolute;
+    left: @spacing-2x;
+    bottom: 40px;
+    font-size: 80%;
+    color: @light-gray;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#log .item {
+    padding: 3px 5px;
+    display: block;
+    color: @light-gray;
+    opacity: 0.8;
+    transition: opacity 10s ease;
+}
+
+#log .item.warn {
+    color: @red;
+    opacity: 1;
+}
+
+#log .item.hidden {
+    opacity: 0;
+}
+
+#log .from {
+    display: inline-block;
+}
+
+#log .from:after {
+    margin-right: 0.4em;
+    display: inline-block;
+    content: ":";
+}

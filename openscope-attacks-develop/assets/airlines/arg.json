@@ -1,0 +1,28 @@
+{
+    "icao": "arg",
+    "name": "Aerolíneas Argentinas",
+    "callsign": {
+        "name": "Argentina",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A332", 10],
+            ["A343", 1],
+            ["B38M", 5],
+            ["B737", 8],
+            ["B738", 31]
+        ],
+        "short": [
+            ["B38M", 5],
+            ["B737", 8],
+            ["B738", 31]
+        ],
+        "long": [
+            ["A332", 10],
+            ["A343", 1]
+        ]
+    }
+}

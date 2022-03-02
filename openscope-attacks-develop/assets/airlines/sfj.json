@@ -1,0 +1,15 @@
+{
+    "icao": "sfj",
+    "name": "StarFlyer",
+    "callsign": {
+        "name": "Starflyer",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A320", 10]
+        ]
+    }
+}

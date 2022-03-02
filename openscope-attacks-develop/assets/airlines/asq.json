@@ -1,0 +1,18 @@
+{
+    "icao": "asq",
+    "name": "ExpressJet",
+    "callsign": {
+        "name": "Acey",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["CRJ7", 42],
+            ["CRJ9", 3],
+            ["E135", 3],
+            ["E145", 114]
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "icao": "jtg",
+    "name": "Jet Time",
+    "callsign": {
+        "name": "Jettime",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B737", 5]
+        ]
+    }
+}

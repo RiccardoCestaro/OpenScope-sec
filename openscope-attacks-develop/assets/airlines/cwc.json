@@ -1,0 +1,16 @@
+{
+    "icao": "cwc",
+    "name": "Centurion Air Cargo",
+    "callsign": {
+        "name": "Challenge Cargo",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B744", 4 ],
+            ["MD11", 3 ]
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "icao": "rlu",
+    "name": "RusLine",
+    "callsign": {
+        "name": "Rusline",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["CRJ2", 21]
+        ]
+    }
+}

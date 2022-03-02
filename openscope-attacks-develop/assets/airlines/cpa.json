@@ -1,0 +1,26 @@
+{
+    "icao": "cpa",
+    "name": "Cathay Pacific",
+    "callsign": {
+        "name": "Cathay",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A333", 28],
+            ["A359", 24],
+            ["A35K", 12],
+            ["B773", 17],
+            ["B77W", 51]
+        ],
+        "cargo": [
+            ["B744", 6],
+            ["B748", 14]
+        ],
+        "a333": [
+            ["A333", 28]      
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "icao": "gwi",
+    "name": "Germanwings",
+    "callsign": {
+        "name": "German Wings",
+        "callsignFormats": [
+            "##@",
+            "#@@",
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 16],
+            ["A320", 7]
+        ]
+    }
+}

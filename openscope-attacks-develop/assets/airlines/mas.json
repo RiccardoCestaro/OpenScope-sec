@@ -1,0 +1,19 @@
+{
+    "icao": "mas",
+    "name": "Malaysia Airlines",
+    "callsign": {
+        "name": "Malaysian",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A332",  4],
+            ["A333", 15],
+            ["A388",  6],
+            ["B738", 56],
+            ["B744",  3]
+        ]
+    }
+}

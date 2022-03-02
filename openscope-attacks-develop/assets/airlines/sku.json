@@ -1,0 +1,16 @@
+{
+    "icao": "sku",
+    "name": "Sky Airline",
+    "callsign": {
+        "name": "Aerosky",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A319", 9],
+            ["A20N", 17]
+        ]
+    }
+}

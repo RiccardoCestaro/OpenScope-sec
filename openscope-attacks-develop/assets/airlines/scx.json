@@ -1,0 +1,16 @@
+{
+    "icao": "scx",
+    "name": "Sun Country Airlines",
+    "callsign": {
+        "name": "Sun Country",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B737", 4],
+            ["B738", 16]
+        ]
+    }
+}

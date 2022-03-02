@@ -1,0 +1,15 @@
+{
+    "icao": "jja",
+    "name": "Jeju Air",
+    "callsign": {
+        "name": "Jeju Air",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 34]
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "icao": "axb",
+    "name": "Air India Express",
+    "callsign": {
+        "name": "Express India",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["B738", 23]
+        ],
+        "b738": [
+            ["B738", 23]
+        ]
+    }
+}

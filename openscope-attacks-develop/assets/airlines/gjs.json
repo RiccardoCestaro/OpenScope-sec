@@ -1,0 +1,16 @@
+{
+    "icao": "gjs",
+    "name": "GoJet Airlines",
+    "callsign": {
+        "name": "Lindbergh",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["CRJ7", 46],
+            ["CRJ9", 7]
+        ]
+    }
+}

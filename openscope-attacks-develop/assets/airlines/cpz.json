@@ -1,0 +1,15 @@
+{
+    "icao": "cpz",
+    "name": "Compass Airlines",
+    "callsign": {
+        "name": "Compass",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["E170", 32]
+        ]
+    }
+}

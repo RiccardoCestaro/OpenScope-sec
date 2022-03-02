@@ -1,0 +1,20 @@
+{
+    "icao": "amc",
+    "name": "Air Malta",
+    "callsign": {
+        "name": "Air Malta",
+        "callsignFormats": [
+            "###"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A20N", 3],
+            ["A320", 7]
+        ],
+        "short": [
+            ["A20N", 3],
+            ["A320", 7]
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "icao": "nks",
+    "name": "Spirit Airlines",
+    "callsign": {
+        "name": "Spirit Wings",
+        "callsignFormats": [
+            "####"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A20N", 24],
+            ["A319", 31],
+            ["A320", 64],
+            ["A321", 30]
+        ]
+    }
+}

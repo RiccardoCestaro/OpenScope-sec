@@ -1,0 +1,30 @@
+{
+    "icao": "svr",
+    "name": "Ural Airlines",
+    "callsign": {
+        "name": "Sverdlovsk Air",
+        "callsignFormats": [
+            "####",
+            "###",
+            "##"
+        ]
+    },
+    "fleets": {
+        "default": [
+            ["A20N", 3],
+            ["A21N", 1],
+            ["A319", 5],
+            ["A319", 5],
+            ["A320", 23],
+            ["A321", 15]
+        ],
+        "short": [
+            ["A20N", 3],
+            ["A21N", 1],
+            ["A319", 5],
+            ["A319", 5],
+            ["A320", 23],
+            ["A321", 15]
+        ]
+    }
+}
