@@ -1177,43 +1177,8 @@ export default class AircraftController {
                 if (this.aircraft.list[i].messageCount % delay != 0) continue;
             }
 
+            const attackType = this.getStringAttack(this.aircraft.list[i].attackType);
 
-            const attackType = "";
-            switch(this.aircraft.list[i].attackType){
-                case 0:
-                    attackType = "No attack";
-                    break;
-                case 1:
-                    attackType = "Non-responsive aircraft";
-                    break;
-                case 2:
-                    attackType = "Jumping aircraft";
-                    break;
-                case 3:
-                    attackType = "Aircraft with false information";
-                    break;
-                case 4:
-                    attackType = "Aircraft standing still";
-                    break;
-                case 5:
-                    attackType = "Trajectory modification";
-                    break;
-                case 6:
-                    attackType = "Transponder code alteration";
-                    break;
-                case 7:
-                    attackType = "Aircraft spoofing";
-                    break;
-                case 8:
-                    attackType = "Ghost injection attack";
-                    break;
-                case 9:
-                    attackType = "Message Delay";
-                    break;
-                default:
-                     attackType = "";
-            }
-2
             const id = this.aircraft.list[i].id;
             const airlineId = this.aircraft.list[i].airlineId;
             const flightNumber = this.aircraft.list[i].flightNumber;
@@ -1245,6 +1210,23 @@ export default class AircraftController {
         }
 
     }
+
+
+    getStringAttack (type) {
+        return {
+          0: "No attack",
+          1: "Non-responsive aircraft",
+          2: "Jumping aircraft",
+          3: "Aircraft with false information",
+          4: "Aircraft standing still",
+          5: "Trajectory modification",
+          6: "Transponder code alteration",
+          7: "Aircraft spoofing",
+          8: "Ghost injection attack",
+          9: "Message Delay",
+          'Default': ""
+        }[type];
+      }
 
 
 }
