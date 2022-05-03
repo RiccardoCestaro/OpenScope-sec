@@ -175,6 +175,8 @@ export const EVENT = {
     SET_SPECIFIC_AIRCRAFT: 'set-specific-aircraft',
     SET_SPECIFIC_ATTACK: 'set-specific-attack',
     SET_INTERVAL_TIME: 'set-interval-time',
+    SET_TRAJ_SLOPE: 'set-trajectory-slope',
+    SET_TRAJ_MAXCHANGE: 'set-trajectory-max-change',
 
     /**
      * Step through pre-defined timewarp speeds
