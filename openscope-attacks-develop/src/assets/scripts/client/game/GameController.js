@@ -109,6 +109,13 @@ class GameController {
         this.dRarity = 0; // message delay
         this.messageDelay = 0;
         this.showAttackAircraftVisibility = false;
+        
+        /**
+        * for trajectory modification attack
+        */
+        this.vtmSlope = 2;
+        this.vtmMaxChange = 0.0174533;
+        this.numberOfSteps = 15;
 
         this.needUpdateOfRates = 1;
 
@@ -241,6 +248,8 @@ class GameController {
         this._eventBus.on(EVENT.SET_SPECIFIC_AIRCRAFT, this._setSpecificAircraft);
         this._eventBus.on(EVENT.SET_SPECIFIC_ATTACK, this._setSpecificAttack);
         this._eventBus.on(EVENT.SET_INTERVAL_TIME, this._setTimeOfAttack);
+        this._eventBus.on(EVENT.SET_TRAJ_SLOPE, this._setTrajSlope);
+        this._eventBus.on(EVENT.SET_TRAJ_MAXCHANGE, this._setTrajMaxChange);
 
         window.addEventListener('blur', this._onWindowBlurHandler);
         window.addEventListener('focus', this._onWindowFocusHandler);
@@ -281,6 +290,8 @@ class GameController {
         this._eventBus.off(EVENT.SET_SPECIFIC_AIRCRAFT, this._setSpecificAircraft);
         this._eventBus.off(EVENT.SET_SPECIFIC_ATTACK, this._setSpecificAttack);
         this._eventBus.off(EVENT.SET_INTERVAL_TIME, this._setTimeOfAttack);
+        this._eventBus.off(EVENT.SET_TRAJ_SLOPE, this._setTrajSlope);
+        this._eventBus.off(EVENT.SET_TRAJ_MAXCHANGE, this._setTrajMaxChange);
         
         return this.destroy();
     }
@@ -813,6 +824,15 @@ class GameController {
         }
         this.optionUpdate += TimeKeeper.accumulatedDeltaTime.toFixed(1) + ': ' + "Changed jumping radius to "+themeName+" radius\n";
     };
+    
+    _setTrajSlope = (themeName) => {
+        this.vtmSlope = parseInt(themeName.split(" ")[0]);
+        this.numberOfSteps = parseInt(themeName.split(" ")[1]);
+    }
+
+    _setTrajMaxChange = (themeName) => {
+        this.vtmMaxChange = parseFloat(themeName);
+    }
 
     _setARarity = (themeName) => {
         var per = "";
