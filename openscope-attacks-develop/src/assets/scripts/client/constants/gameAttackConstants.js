@@ -514,7 +514,52 @@ export const GAME_ATTACK_VALUES = [
             }
         ]
     },
-
+    {
+        name: 'trajectorySlope',
+        id: 'traj-slope',
+        defaultValue: '30',
+        description: 'Trajectory modification slope',
+        help: 'The slope of the trajectory modification attack. ',
+        type: 'select',
+        onChangeEventHandler: EVENT.SET_TRAJ_SLOPE,
+        optionList: [
+            {
+                displayLabel: 'Low',
+                value: '2 15'
+            },
+            {
+                displayLabel: 'Medium',
+                value: '30 8'
+            },
+            {
+                displayLabel: 'High',
+                value: '300 4'
+            }
+        ]
+    },
+    {
+        name: 'trajectoryMaxChange',
+        id: 'traj-max-change',
+        defaultValue: '0.0872665',
+        description: 'Trajectory modification max change',
+        help: 'The maximum change of the trajectory modification attack. ',
+        type: 'select',
+        onChangeEventHandler: EVENT.SET_TRAJ_MAXCHANGE,
+        optionList: [
+            {
+                displayLabel: '1 degree',
+                value: '0.0174533'
+            },
+            {
+                displayLabel: '5 degrees',
+                value: '0.0872665'
+            },
+            {
+                displayLabel: '10 degrees',
+                value: '0.174533'
+            }
+        ]
+    },
     {
         name: 'showAttackAircraftVisibility',
         id: 'attack-visibility',
