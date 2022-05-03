@@ -129,7 +129,10 @@ export default class AircraftModel {
         /**
         * used for trajectory modification attack
         */
-        this.maxHeadingChange = 0.005;
+        this.changeDirection = 1;
+        this.x = 0;
+        this.end = 1;
+        this.justStopped = false;
 
         /**
         * used for transponder code alteration attack
@@ -578,7 +581,7 @@ export default class AircraftModel {
 
         const airport = AirportController.airport_get();
         // const initialRunway = airport.getActiveRunwayForCategory(this.category);
-
+        
         if (this.category === FLIGHT_CATEGORY.DEPARTURE) {
             this.setFlightPhase(FLIGHT_PHASE.APRON);
             this.altitude = airport.positionModel.elevation;
@@ -2531,6 +2534,10 @@ export default class AircraftModel {
             GameController.stoppers++;
           } else if (random >= threshold4 && random < threshold5 ){ //trajectory modification
             this.attackType = rarities["trajectoryModification"].attack;
+            this.changeDirection = this.heading > 4? -1 : 1;
+            this.x = -Math.sqrt(-Math.log(0.001/GameController.vtmMaxChange)/GameController.vtmSlope);
+            this.end = -this.x;
+            this.justStopped = false;
             GameController.modifiedTrajectory++;
           } else if (random >= threshold5 && random < threshold6){ // false alarm
             this.attackType = rarities["transponderCodeAlteration"].attack;
@@ -2927,6 +2934,10 @@ export default class AircraftModel {
                 break;
             case 5:
                 GameController.modifiedTrajectory++;
+                this.changeDirection = this.heading > 4? -1 : 1;
+                this.x = -Math.sqrt(-Math.log(0.001/GameController.vtmMaxChange)/GameController.vtmSlope);
+                this.end = -this.x;
+                this.justStopped = false;
                 break;
             case 6:
                 this.falseAlarmAttack();
