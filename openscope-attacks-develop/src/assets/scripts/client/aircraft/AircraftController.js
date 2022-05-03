@@ -1176,14 +1176,32 @@ export default class AircraftController {
                 this.aircraft.list[i].messageCount += 1;
                 if (this.aircraft.list[i].messageCount % delay != 0) continue;
             }
+            
+            var step = this.aircraft.list[i].end/GameController.numberOfSteps;
+            var change = 0;
+            if (this.aircraft.list[i].attackType == 5){
+                change = GameController.vtmMaxChange*Math.exp(-GameController.vtmSlope*Math.pow(this.aircraft.list[i].x, 2));
+                if (this.aircraft.list[i].x < 0) {
+                    this.aircraft.list[i].x = this.aircraft.list[i].x+step;
+                }
+            }
 
             const attackType = this.getStringAttack(this.aircraft.list[i].attackType);
+            
+            if (this.aircraft.list[i].justStopped){
+                change = GameController.vtmMaxChange*Math.exp(-GameController.vtmSlope*Math.pow(this.aircraft.list[i].x, 2));
+                this.aircraft.list[i].x = this.aircraft.list[i].x+step;
+                attackType = 'Trajectory modification';
+                if (this.aircraft.list[i].x > this.aircraft.list[i].end){
+                    this.aircraft.list[i].justStopped = false;
+                }
+            }
 
             const id = this.aircraft.list[i].id;
             const airlineId = this.aircraft.list[i].airlineId;
             const flightNumber = this.aircraft.list[i].flightNumber;
             const transponderCode =  this.aircraft.list[i].transponderCode;
-            const heading = this.aircraft.list[i].heading;
+            const heading = this.aircraft.list[i].heading + change*this.aircraft.list[i].changeDirection;
             const altitude = this.aircraft.list[i].altitude;
             const speed =  this.aircraft.list[i].speed;
             const groundSpeed = this.aircraft.list[i].groundSpeed;
@@ -1204,7 +1222,7 @@ export default class AircraftController {
 
 
 
-            this.logAdsb += '"' + id + '","' + airlineId + '","' +callsign+'","'+flightNumber+'","' + transponderCode + '","' + heading + '","' + longitude + '","' + latitude + '","';
+            this.logAdsb += '"' + id + '","' + airlineId + '","' + callsign +'","'+ flightNumber +'","' + transponderCode + '","' + heading + '","' + longitude + '","' + latitude + '","';
             this.logAdsb += altitude + '","'  + speed + '","' + groundSpeed + '","' + groundTrack + '","' + takeOffTime +   '","' + trueAirSpeed +   '","' + radial +   '","' + distance + '","' + origin + '","'  + destination + '","'  + taxi_start + '","' +  attackType  +'"\n';
 
         }
