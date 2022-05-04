@@ -104,7 +104,7 @@ export default class AttacksController {
             if (opt.type !== 'select') {
                 return;
             }
-            if (opt.description === 'Attack specific aircraft'){
+            if (opt.description === 'Attack specific aircraft and save ads-b messages'){
                 opt.optionList = newOptionList;
             }
             const $container = this._buildOptionTemplate(opt);

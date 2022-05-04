@@ -584,7 +584,7 @@ export const GAME_ATTACK_VALUES = [
         name: 'attackSpecificAircraft',
         id: 'target',
         defaultValue: 'None',
-        description: 'Attack specific aircraft',
+        description: 'Attack specific aircraft and save ads-b messages',
         help: 'Attacks a specific aircraft by selecting it by callsign.',
         type: 'select',
         onChangeEventHandler: EVENT.SET_SPECIFIC_AIRCRAFT,

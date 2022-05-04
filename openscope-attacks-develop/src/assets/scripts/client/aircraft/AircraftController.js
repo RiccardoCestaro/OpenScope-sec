@@ -27,6 +27,7 @@ import DynamicPositionModel from '../base/DynamicPositionModel';
 // Temporary const declaration here to attach to the window AND use as internal property
 const aircraft = {};
 const logAdsb = "";
+const logAdsb_single = "";
 
 /**
  *
@@ -127,6 +128,8 @@ export default class AircraftController {
         this.tRoute = "";
 
         this.logAdsb = '"id","airlineId","callsign","flightNumber","transponderCode","heading","longitude","latitude","altitude","speed","groundSpeed","groundTrack","takeOffTime","trueAirSpeed","radial","distance","origin","destination","taxi_start","attackType"\n';
+        this.logAdsb_single = '"id","airlineId","callsign","flightNumber","transponderCode","heading","longitude","latitude","altitude","speed","groundSpeed","groundTrack","takeOffTime","trueAirSpeed","radial","distance","origin","destination","taxi_start","attackType"\n';
+
 
         this.logCounter = 0;
 
@@ -465,6 +468,8 @@ export default class AircraftController {
 
         if(this.logCounter >= 100000){
             this.logAdsb = '"id","airlineId","callsign","flightNumber","transponderCode","heading","longitude","latitude","altitude","speed","groundSpeed","groundTrack","takeOffTime","trueAirSpeed","radial","distance","origin","destination","taxi_start","attackType"\n';
+            this.logAdsb_single = '"id","airlineId","callsign","flightNumber","transponderCode","heading","longitude","latitude","altitude","speed","groundSpeed","groundTrack","takeOffTime","trueAirSpeed","radial","distance","origin","destination","taxi_start","attackType"\n';
+            
         }
 
         if (this.endTime == 1){
@@ -1166,66 +1171,76 @@ export default class AircraftController {
       }
 
 
-    updateAdsbMessages (){
-
-        for (let i = 0; i < this.aircraft.list.length; i++) {
-
-            var delay = this.aircraft.list[i].messageDelay;
-
-            if (delay != 0){
-                this.aircraft.list[i].messageCount += 1;
-                if (this.aircraft.list[i].messageCount % delay != 0) continue;
-            }
-            
-            var step = this.aircraft.list[i].end/GameController.numberOfSteps;
-            var change = 0;
-            if (this.aircraft.list[i].attackType == 5){
-                change = GameController.vtmMaxChange*Math.exp(-GameController.vtmSlope*Math.pow(this.aircraft.list[i].x, 2));
-                if (this.aircraft.list[i].x < 0) {
-                    this.aircraft.list[i].x = this.aircraft.list[i].x+step;
-                }
-            }
-
-            const attackType = this.getStringAttack(this.aircraft.list[i].attackType);
-            
-            if (this.aircraft.list[i].justStopped){
-                change = GameController.vtmMaxChange*Math.exp(-GameController.vtmSlope*Math.pow(this.aircraft.list[i].x, 2));
-                this.aircraft.list[i].x = this.aircraft.list[i].x+step;
-                attackType = 'Trajectory modification';
-                if (this.aircraft.list[i].x > this.aircraft.list[i].end){
-                    this.aircraft.list[i].justStopped = false;
-                }
-            }
-
-            const id = this.aircraft.list[i].id;
-            const airlineId = this.aircraft.list[i].airlineId;
-            const flightNumber = this.aircraft.list[i].flightNumber;
-            const transponderCode =  this.aircraft.list[i].transponderCode;
-            const heading = this.aircraft.list[i].heading + change*this.aircraft.list[i].changeDirection;
-            const altitude = this.aircraft.list[i].altitude;
-            const speed =  this.aircraft.list[i].speed;
-            const groundSpeed = this.aircraft.list[i].groundSpeed;
-            const groundTrack = this.aircraft.list[i].groundTrack;
-            const takeOffTime = this.aircraft.list[i].takeoffTime;
-            const trueAirSpeed = this.aircraft.list[i].trueAirspeed;
-            const radial = this.aircraft.list[i].radial;
-            const distance = this.aircraft.list[i].distance;
-            const origin = this.aircraft.list[i].origin;
-            const destination = this.aircraft.list[i].destination;
-            const taxi_start = this.aircraft.list[i].taxi_start;
-
-
-            const callsign = this.aircraft.list[i].callsign;
-
-            const longitude = this.aircraft.list[i].positionModel.longitude;
-            const latitude = this.aircraft.list[i].positionModel.latitude;
-
-
-
-            this.logAdsb += '"' + id + '","' + airlineId + '","' + callsign +'","'+ flightNumber +'","' + transponderCode + '","' + heading + '","' + longitude + '","' + latitude + '","';
-            this.logAdsb += altitude + '","'  + speed + '","' + groundSpeed + '","' + groundTrack + '","' + takeOffTime +   '","' + trueAirSpeed +   '","' + radial +   '","' + distance + '","' + origin + '","'  + destination + '","'  + taxi_start + '","' +  attackType  +'"\n';
-
+    updateAdsbMessage(target){
+        
+        var delay = target.messageDelay;
+   
+        if (delay != 0){
+            target.messageCount += 1;
+                if (target.messageCount % delay != 0) return;
         }
+            
+        var step = target.end/GameController.numberOfSteps;
+        var change = 0;
+        if (target.attackType == 5){
+            change = GameController.vtmMaxChange*Math.exp(-GameController.vtmSlope*Math.pow(target.x, 2));
+            if (target.x < 0) {
+                target.x = target.x+step;
+            }
+        }
+
+        const attackType = this.getStringAttack(target.attackType);
+            
+        if (target.justStopped){
+            change = GameController.vtmMaxChange*Math.exp(-GameController.vtmSlope*Math.pow(target.x, 2));
+            target.x = target.x+step;
+            attackType = 'Trajectory modification';
+            if (target.target.x > target.end){
+                target.justStopped = false;
+            }
+        }
+
+        const id = target.id;
+        const airlineId = target.airlineId;
+        const flightNumber = target.flightNumber;
+        const transponderCode =  target.transponderCode;
+        const heading = target.heading + change*target.changeDirection;
+        const altitude = target.altitude;
+        const speed =  target.speed;
+        const groundSpeed = target.groundSpeed;
+        const groundTrack = target.groundTrack;
+        const takeOffTime = target.takeoffTime;
+        const trueAirSpeed = target.trueAirspeed;
+        const radial = target.radial;
+        const distance = target.distance;
+        const origin = target.origin;
+        const destination = target.destination;
+        const taxi_start = target.taxi_start;
+
+
+        const callsign = target.callsign;
+
+        const longitude = target.positionModel.longitude;
+        const latitude = target.positionModel.latitude;
+
+
+
+        return '"' + id + '","' + airlineId + '","' + callsign +'","'+ flightNumber +'","' + transponderCode + '","' + heading + '","' + longitude + '","' + latitude + '","' 
+        + altitude + '","'  + speed + '","' + groundSpeed + '","' + groundTrack + '","' + takeOffTime +   '","' + trueAirSpeed +   '","' + radial +   '","' + distance + '","' + origin + '","'  + destination + '","'  + taxi_start + '","' +  attackType  +'"\n';
+
+    }
+
+    updateAdsbMessages(){
+
+        for (let i = 0; i < this.aircraft.list.length; i++) 
+            this.logAdsb += this.updateAdsbMessage(this.aircraft.list[i]);
+
+
+        if (this.selectedTarget == 'None') return;
+        
+        var target = this.findAircraftByCallsign(this.selectedTarget);
+        this.logAdsb_single += this.updateAdsbMessage(target);
+        
 
     }
 

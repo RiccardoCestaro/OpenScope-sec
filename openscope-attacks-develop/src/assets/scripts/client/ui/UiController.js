@@ -363,11 +363,27 @@ class UiController {
         this.$toggleVideoMap = this.$element.find(SELECTORS.DOM_SELECTORS.TOGGLE_VIDEO_MAP);
         this.$toggleTraffic = this.$element.find(SELECTORS.DOM_SELECTORS.TOGGLE_TRAFFIC);
         document.getElementById("dwn-btn").addEventListener("click",this.download, false);
+        document.getElementById("dwn-adsb-single").addEventListener("click",this.download_ADSB2_single, false);
         document.getElementById("dwn-adsb").addEventListener("click",this.download_ADSB2, false);
         return this.setupHandlers()
             .enable();
     }
 
+    download_ADSB2_single() {
+
+        var finalText = window.aircraftController.logAdsb_single;
+
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(finalText));
+        element.setAttribute('download', "adsb-attacks-single.csv");
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+      }
 
     download_ADSB2() {
 
