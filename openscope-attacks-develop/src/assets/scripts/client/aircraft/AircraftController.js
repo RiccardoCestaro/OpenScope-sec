@@ -1250,12 +1250,12 @@ export default class AircraftController {
           0: "No attack",
           1: "Non-responsive aircraft",
           2: "Jumping aircraft",
-          3: "Aircraft with false information",
+          3: "Aircraft displaying false information",
           4: "Aircraft standing still",
           5: "Trajectory modification",
           6: "Transponder code alteration",
           7: "Aircraft spoofing",
-          8: "Ghost injection attack",
+          8: "Ghost injection",
           9: "Message Delay",
           'Default': ""
         }[type];
