@@ -2405,10 +2405,6 @@ export default class AircraftModel {
           this.shallIStandStill = !this.shallIStandStill;
         }
 
-        if(this.attackType == 5 && Math.floor(TimeKeeper.accumulatedDeltaTime) % this.myRandomTime == 0){
-            this.heading = this.heading + Math.random() * this.maxHeadingChange;
-        }
-
         if (this.hit) {
             // 90fps fall rate?...
             this.altitude -= 90 * TimeKeeper.getDeltaTimeForGameStateAndTimewarp();
