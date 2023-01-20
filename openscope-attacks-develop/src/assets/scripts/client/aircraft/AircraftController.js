@@ -469,7 +469,7 @@ export default class AircraftController {
         if(this.logCounter >= 100000){
             this.logAdsb = '"id","airlineId","callsign","flightNumber","transponderCode","heading","longitude","latitude","altitude","speed","groundSpeed","groundTrack","takeOffTime","trueAirSpeed","radial","distance","origin","destination","taxi_start","attackType"\n';
             this.logAdsb_single = '"id","airlineId","callsign","flightNumber","transponderCode","heading","longitude","latitude","altitude","speed","groundSpeed","groundTrack","takeOffTime","trueAirSpeed","radial","distance","origin","destination","taxi_start","attackType"\n';
-            
+
         }
 
         if (this.endTime == 1){
@@ -1172,14 +1172,14 @@ export default class AircraftController {
 
 
     updateAdsbMessage(target){
-        
+
         var delay = target.messageDelay;
-   
+
         if (delay != 0){
             target.messageCount += 1;
                 if (target.messageCount % delay != 0) return;
         }
-            
+
         var step = target.end/GameController.numberOfSteps;
         var change = 0;
         if (target.attackType == 5){
@@ -1189,13 +1189,13 @@ export default class AircraftController {
             }
         }
 
-        const attackType = this.getStringAttack(target.attackType);
-            
+        var attackType = this.getStringAttack(target.attackType);
+
         if (target.justStopped){
             change = GameController.vtmMaxChange*Math.exp(-GameController.vtmSlope*Math.pow(target.x, 2));
             target.x = target.x+step;
             attackType = 'Trajectory modification';
-            if (target.target.x > target.end){
+            if (target.x > target.end){
                 target.justStopped = false;
             }
         }
@@ -1225,22 +1225,22 @@ export default class AircraftController {
 
 
 
-        return '"' + id + '","' + airlineId + '","' + callsign +'","'+ flightNumber +'","' + transponderCode + '","' + heading + '","' + longitude + '","' + latitude + '","' 
+        return '"' + id + '","' + airlineId + '","' + callsign +'","'+ flightNumber +'","' + transponderCode + '","' + heading + '","' + longitude + '","' + latitude + '","'
         + altitude + '","'  + speed + '","' + groundSpeed + '","' + groundTrack + '","' + takeOffTime +   '","' + trueAirSpeed +   '","' + radial +   '","' + distance + '","' + origin + '","'  + destination + '","'  + taxi_start + '","' +  attackType  +'"\n';
 
     }
 
     updateAdsbMessages(){
 
-        for (let i = 0; i < this.aircraft.list.length; i++) 
+        for (let i = 0; i < this.aircraft.list.length; i++)
             this.logAdsb += this.updateAdsbMessage(this.aircraft.list[i]);
 
 
         if (this.selectedTarget == 'None') return;
-        
+
         var target = this.findAircraftByCallsign(this.selectedTarget);
         this.logAdsb_single += this.updateAdsbMessage(target);
-        
+
 
     }
 
