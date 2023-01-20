@@ -581,7 +581,7 @@ export default class AircraftModel {
 
         const airport = AirportController.airport_get();
         // const initialRunway = airport.getActiveRunwayForCategory(this.category);
-        
+
         if (this.category === FLIGHT_CATEGORY.DEPARTURE) {
             this.setFlightPhase(FLIGHT_PHASE.APRON);
             this.altitude = airport.positionModel.elevation;
@@ -2891,6 +2891,7 @@ export default class AircraftModel {
               GameController.stoppers--;
           } else if(this.attackType == 5){
               GameController.modifiedTrajectory--;
+              this.justStopped = true;
           } else if(this.attackType == 6){
               this.resetTrueTransponderCode();
               GameController.alarmers--;
@@ -2970,6 +2971,7 @@ export default class AircraftModel {
                     break;
                 case 5:
                     GameController.modifiedTrajectory--;
+                    this.justStopped = true;
                     break;
                 case 6:
                     this.resetTrueTransponderCode();
