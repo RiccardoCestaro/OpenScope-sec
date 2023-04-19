@@ -1,4 +1,4 @@
-# openScope Air Traffic Control Simulator with ADS-B attacks
+# OpenScope-sec: openScope Air Traffic Control Simulator with ADS-B attacks
 
 To get started playing the simulator with ADS-B attacks, please follow the instructions called "Developer Quick Start" to start the simulator locally on your computer. The first extension was built by Anton Blåberg & Gustav Lindahl as a bachelor thesis work at Linköping University in 2020 and can be found on this repository: https://github.com/joakimthorn96/openScopeAttacks.
 The second extension provides new types of attacks and was implemented by Eleonora Mancini & Riccardo Cestaro for a university project in Padua. First and second extensions are available in this repository.
@@ -25,40 +25,23 @@ The aircraft affected by this attack changes its heading many times through time
 5. Message Delay Attack: the aircraft affected by this attack send ADS-B messages with a lower frequency than normal. In a real case scenario this could be obtained by the adversary by deleting some of the ADS-B messages that the aircraft broadcasts. In the simulation though, this is obtained by saving tuples only when the number of updates modulo n is zero, where n is the delay rate that can be chosen in the GUI. This value ranges from skipping only one message up to skipping 70 of them.
 
 Also, for the second extension we implement the possibility to choose a specific aircraft to attack since before aircraft are chosen according to a distribution.
-  
-  
-  
-  
--------------------------------Below text is from standard openscope repository---------------------------
-
-  
-  
-  
-  
-Visit http://openscope.io to begin playing now!
-
-If you're just getting started, try the tutorial and see the [command reference](documentation/commands.md) for a full list of commands you can use. For information on each airport, see the [airport guide](documentation/airport-guides/airport-guide-directory.md).
-
-Feel free to [join us on slack](http://slack.openscope.io/) if you have questions, comments or would like to contribute to the project. We can then add you to the organization so you can begin committing to this repo.
-
----
 
 ## Developer Quick Start
 
+The guide is pretty similar to the original OpenScope.
+
 _Prerequisites: In order to successfully complete this quick start, you will need to have the following installed locally:_
 
-- [Git](https://git-scm.com/downloads)
-- [Node](https://nodejs.org/en/download/)
+- Git: sudo apt install git
+- Nodejs: sudo apt-get install -y nodejs
 
-_Installation directions are beyond the scope of this document.  Instead, search the [Google](http://google.com).  Installing these two packages has been written about ad-nauseum._
+To install and run OpenScope-sec run the following commands:
 
-From a terminal (or GitBash for Windows users), run the following commands:
-
-1. `git clone https://github.com/openscope/openscope.git`
-1. `cd openscope`
-1. `npm install`
-1. `npm run build`
-1. `npm run start`
+1. `git clone https://github.com/RiccardoCestaro/OpenScope-plus.git`
+2. `cd openscope`
+3. `npm install`
+4. `npm run build`
+5. `npm run start`
 
 Once that finishes doing its thing, you should see something close to the following in the terminal:
 
@@ -68,25 +51,27 @@ Once that finishes doing its thing, you should see something close to the follow
 Listening on PORT 3003
 ```
 
-Success!!
+You should now be able to play with the simulator by opening a browser (Google Chrome is recommended) and connecting at the following address:
+`localhost:3003`
 
-You you do not see this message and are having trouble getting set up, please join us on [Slack](http://slack.openscope.io) and someone will be able to troubleshoot with you.
+However, since Google Chrome updates very often there may be the necessity to update the Chrome driver.
+To do so, you can download it at the following link: https://chromedriver.chromium.org/downloads, and place/overwrite it in the `chromedriver_linux64`.
+Note that the Chrome drivers must match your Google Chrome version.
 
-For more information on the available tools, please view the [Tools Readme](tools/README.md).
+### Team
+Eleonora Mancini (eleonora.mancini@studenti.unipd.it)  
+Riccardo Cestaro (riccardo.cestaro.1@studenti.unipd.it)  
+Federico Turrin (turrin@math.unipd.it)
 
-## Contributing
+We are members of [SPRITZ Security and Privacy Research Group](https://spritz.math.unipd.it/) at University of Padua, Italy.
 
-We do not use forks. Instead, we add to add all contributors to the openScope organization. This way, we can keep all branches local to the organization, and use testing integrations on pull requests. If you are interested in contributing, _please message Erik Quinn or Nate Geslin on slack_ so you can be added to the organization.
+### Cite
 
-We use the [GitFlow Branching Model](http://nvie.com/posts/a-successful-git-branching-model) for managing branches.  If you would like to contribute, you will be expected to use appropriate branch names based on this methodology (and we can help if you have questions).
+Are you using OpenScope-sec in your research work? Please, cite us:
+```bibtex   
+The paper is still under submission
+```
 
-Don't know Javascript?  That's cool, we're always looking for beta testers and/or airport contributors.  If you would like to add a new airport, or help update existing airports, please read the [Airport Format Documentation](documentation/airport-format.md) and [Airport File Standards Documentation](documentation/airport-file-standards.md) to get up to speed on what is expected in that file.
-
-## Privacy Disclosures
-
-We use Google Analytics for gathering data about how our app is used. See [Event Tracking](documentation/event-tracking.md) for more information.
-
-## Credits
 
 OpenScope is supported by the following awesome projects. Thank you!
 

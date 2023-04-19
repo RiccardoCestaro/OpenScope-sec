@@ -48,8 +48,8 @@ jump_dinstance = Select(driver.find_element(By.ID, "jump-rad"))
 jump_dinstance.select_by_value("Moderate")  # equal to medium
 jump = Select(driver.find_element(By.ID, "jump-freq"))
 jump.select_by_value("1")
-time.sleep(7)
-jump.select_by_value("0")
+#time.sleep(7)
+#jump.select_by_value("0")
 # attack effect cooldown
 time.sleep(10)
 
@@ -76,7 +76,7 @@ trajectory_degree = Select(driver.find_element(By.ID, "traj-max-change"))
 trajectory_degree.select_by_value("0.0174533")  # equal to 1 degree
 trajectory = Select(driver.find_element(By.ID, "vtm"))
 trajectory.select_by_value("1")
-time.sleep(7)
+time.sleep(20)
 trajectory.select_by_value("0")
 # attack effect cooldown
 time.sleep(10)
@@ -92,8 +92,8 @@ time.sleep(10)
 ## aircraft spoofing attack
 spoof = Select(driver.find_element(By.ID, "spoof"))
 spoof.select_by_value("1")
-time.sleep(7)
-spoof.select_by_value("0")
+#time.sleep(7)
+#spoof.select_by_value("0")
 # attack effect cooldown
 time.sleep(10)
 
