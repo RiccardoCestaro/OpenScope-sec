@@ -71,12 +71,3 @@ Are you using OpenScope-sec in your research work? Please, cite us:
 ```bibtex   
 The paper is still under submission
 ```
-
-
-OpenScope is supported by the following awesome projects. Thank you!
-
-- [![pullreminders](https://pullreminders.com/badge.svg)](https://pullreminders.com?ref=badge) - Slack integration to improve our PR response time
-
-## License
-
-[MIT License](LICENSE.md) 
