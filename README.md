@@ -33,12 +33,12 @@ The guide is pretty similar to the original OpenScope.
 _Prerequisites: In order to successfully complete this quick start, you will need to have the following installed locally:_
 
 - Git: sudo apt install git
-- Nodejs: sudo apt-get install -y nodejs
+- Nodejs: sudo apt-get install -y nodejs npm
 
 To install and run OpenScope-sec run the following commands:
 
-1. `git clone https://github.com/RiccardoCestaro/OpenScope-plus.git`
-2. `cd openscope`
+1. `git clone https://github.com/RiccardoCestaro/OpenScope-sec.git`
+2. `cd OpenScope-sec`
 3. `npm install`
 4. `npm run build`
 5. `npm run start`
