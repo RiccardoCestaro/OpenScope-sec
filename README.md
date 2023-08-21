@@ -69,5 +69,11 @@ We are members of [SPRITZ Security and Privacy Research Group](https://spritz.ma
 
 Are you using OpenScope-sec in your research work? Please, cite us:
 ```bibtex   
-The paper is still under submission
+@inproceedings{cestaro2023openscope,
+  title={OpenScope-sec: An ADS-B Simulator to Support the Security Research},
+  author={Cestaro, Riccardo and Conti, Mauro and Mancini, Elonora and Turrin, Federico},
+  booktitle={Proceedings of the 18th International Conference on Availability, Reliability and Security},
+  pages={1--6},
+  year={2023}
+}
 ```
